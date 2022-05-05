@@ -11,6 +11,7 @@ body {
 }
 
 /* from Bulma */
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -34,8 +35,21 @@ body {
 }
 
 .btn-black {
-    background: gray;
+    background: black;
     color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 .shop-now-button:hover,
@@ -49,11 +63,15 @@ body {
 }
 
 .text-black {
-    color: gray !important;
+    color: #000 !important;
 }
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
 }
 
 .overlay {
@@ -64,6 +82,23 @@ body {
 	position: fixed;
 	background: white;
 	z-index: -1;
+}
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /* -------------------------------- Media Queries */
@@ -90,11 +125,6 @@ body {
     }
 }
 
-a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
-}
-
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
@@ -105,4 +135,3 @@ a.category-badge > span.badge:hover {
         height: calc(100vh - 116px);
     }
 }
-

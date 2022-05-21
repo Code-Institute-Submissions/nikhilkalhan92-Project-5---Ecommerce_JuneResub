@@ -2,6 +2,10 @@
 
 Welcome to my 5th project. This project is a functioning E-commerce Website.
 
+I was trying to think of an idea that would make me proud for my last project. and it clicked.
+
+When I was younger, I loved Toys! The majority of toys especially the older ones you see are the ones I actually had when I was younger. This is pure nostalgia for me.
+
 My project will contain HTML, CSS, JavaScript, Python+Django, Relational databases & 
 Stripe payments
 
@@ -14,13 +18,60 @@ Stripe payments
 Link to final Project is here -
 
 
-# 1 - UX
+# 1 - User Experience
 
-I was trying to think of an idea that would make me proud for my last project. and it clicked.
+## User Stories
 
-When I was younger, I loved Toys! The majority of toys especially the older ones you see are the ones I actually had when I was younger. This is pure nostalgia for me.
+The structure of the site is designed to be simple and easy to use. It has a good balance of images and content as not overload the user, while allowing the user to have all the information they require.
 
-Enjoy
+The website is for the following user types:
+
+- Users who are interested in buying wrestling figures & nostalgic toys
+- Users who are browsing to add to their collection or purchae for the first time
+- Users who are browsing to purchase something as a gift.
+- Users who are looking to make a bulk purchases if they require.
+
+Client Goals
+
+- The site needs to be easily accesible.
+- The navigation menu needs to be simple to use on a range of devices, including desktop, tablet and mobile.
+- Manoeuvering around the site should be simple and straightforward.
+- To be able to create an user account.
+- It should be easy to register, login and logout.
+- The site should be informative and all the text should be easy to read.
+- Checkout and pay for items easily whilst recieving confirmation 
+
+First Time Visitors
+
+- I want the site to be easy to understand
+- I want the user how to navigate throughout the site easily.
+- I want the user to be able to create an account easily.
+- I want the content to be easily read and understandable.
+- I want the checkout process to be straightforward and easy to understand.
+- I want images to be clearly visible.
+
+Returning User
+
+- To be able to login.
+- To be able to view previous orders.
+- To be able to Create, Read, Update and Delete review comments
+- To Recommend the site to friends and family.
+- To make new purchases with saved details.
+
+Admin User
+
+- I want the admin to be able to create an account.
+- I want the admin to be able to add a product.
+- I want the admin to be able to edit a product.
+- I want the admin to be able to delete a product.
+
+Throughout the project I used the GitHub projects board to log all user stories as my project management tool. This helped me keep focus on the specific tasks as I would move them to the "in progress lane" as I'm working on the story. I would then move them to the "done" lane once the story has been completed. As you see below - you can see the story planned out with screenshots showing my progression.
+
+You will see below my user stories being updated in chronological order.
+
+
+
+
 
 # 2 Structure
 
@@ -64,7 +115,10 @@ There are 3 versions of each wireframe as one shows the design on a web browser 
     -   GitHub was used to store the project's code after being pushed from Git.
 -   [Stripe](https://stripe.com/gb)
     - Stripe was used to create a payment system
-
+-   [Googlefont](https://fonts.google.com/)
+    - was used for all the text content on the site pages.
+-   [AmIResponsive](https://ui.dev/amiresponsive)
+    - Am i Responsive was used to create the image in my Final Design section.
 
 
 # 6. Development Cycle

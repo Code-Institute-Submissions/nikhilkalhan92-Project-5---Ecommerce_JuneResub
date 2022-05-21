@@ -1,4 +1,4 @@
-# Project  - E-commerce  
+# Project 5 - E-commerce  
 
 Welcome to my 5th project. This project is a functioning E-commerce Website.
 
@@ -70,6 +70,21 @@ Throughout the project I used the GitHub projects board to log all user stories 
 You will see below my user stories being updated in chronological order.
 
 
+## Design 
+
+## Fonts
+
+## Color Theme
+
+## Wireframes
+
+# Features
+
+##
+
+
+
+
 
 
 
@@ -119,6 +134,19 @@ There are 3 versions of each wireframe as one shows the design on a web browser 
     - was used for all the text content on the site pages.
 -   [AmIResponsive](https://ui.dev/amiresponsive)
     - Am i Responsive was used to create the image in my Final Design section.
+
+
+
+# Solved Bugs
+
+## Testing
+Validators
+
+## Full Testing
+
+## Lighthouse
+
+
 
 
 # 6. Development Cycle

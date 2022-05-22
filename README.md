@@ -139,6 +139,8 @@ There are 3 versions of each wireframe as one shows the design on a web browser 
 
 # Solved Bugs
 
+1. ![error1](media/error1.png)
+
 ## Testing
 Validators
 

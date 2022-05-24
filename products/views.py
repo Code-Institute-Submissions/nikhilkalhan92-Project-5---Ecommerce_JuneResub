@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 from profiles.models import UserProfile
 from .forms import *
 from .models import *
+from .forms import ProductForm
 
 # Create your views here.
 
@@ -113,7 +114,7 @@ def products_category(request,category):
 def update(request,pk):
     task=Comments.objects.get(id=pk)
     id=task.product.id
-    form=taskform(instance=task)  #whi form huga bs usko edit krsktay hungay 
+    form=taskform(instance=task)  
     context={'form':form}
 
     if request.method=='POST':
@@ -144,10 +145,10 @@ def product_detail(request, product_id):
 
     form=taskform()     # blank form
     if request.method=='POST':
-        form=taskform(request.POST)     # us form mai post request ka data dalegaa 
+        form=taskform(request.POST)      
         Comments.objects.create(comment=request.POST['title'],product=Product.objects.get(pk=product_id),user=UserProfile.objects.get(user=request.user.id))
         if form.is_valid():
-            form.save()                     # us data ko save karega database mai
+            form.save()                    
         return redirect('/products/{}'.format(product_id))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -203,3 +204,14 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

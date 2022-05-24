@@ -141,6 +141,14 @@ There are 3 versions of each wireframe as one shows the design on a web browser 
 
 1. ![error1](media/error1.png)
 
+2. ![error2](media/error2.png)
+
+3. ![error3](media/error3.png)
+
+4. ![error4](media/error4.png)
+
+5. ![error5](media/error5.png)
+
 ## Testing
 Validators
 

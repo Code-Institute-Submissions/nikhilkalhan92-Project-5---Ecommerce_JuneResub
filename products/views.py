@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.models import User
 from django.db.models.functions import Lower
-
-from .models import Product, Category
+from profiles.models import UserProfile
+from .forms import *
+from .models import *
 
 # Create your views here.
 
@@ -46,7 +48,10 @@ def all_products(request):
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
+<<<<<<< HEAD
     print(list(products.values()))
+=======
+>>>>>>> 5f235c82eb3bbc9acf23df9be62d57ee0173a516
     context = {
         'products': products,
         'search_term': query,
@@ -96,6 +101,7 @@ def products_category(request,category):
 
     current_sorting = f'{sort}_{direction}'
 
+
     context = {
         'products': products,
         'search_term': query,
@@ -107,14 +113,100 @@ def products_category(request,category):
 
 
 
+<<<<<<< HEAD
+=======
+# @login_required(login_url='login')
+def update(request,pk):
+    task=Comments.objects.get(id=pk)
+    id=task.product.id
+    form=taskform(instance=task)  #whi form huga bs usko edit krsktay hungay 
+    context={'form':form}
+
+    if request.method=='POST':
+        form=taskform(request.POST,instance=task)
+        if form.is_valid():
+            form.save()
+        return redirect('/products/{}'.format(id))
+
+    return render(request,'products/update.html',context)
+
+def delete(request,pk):
+    item=Comments.objects.get(id=pk)
+    id=item.product.id
+    if request.method=='POST':
+        item.delete()
+        return redirect('/products/{}'.format(id))
+    print(item.product.id)
+    context={
+        'item':item
+    }
+    return render(request,'products/delete.html',context)
+
+
+
+>>>>>>> 5f235c82eb3bbc9acf23df9be62d57ee0173a516
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
 
-    product = get_object_or_404(Product, pk=product_id)
+    form=taskform()     # blank form
+    if request.method=='POST':
+        form=taskform(request.POST)     # us form mai post request ka data dalegaa 
+        Comments.objects.create(comment=request.POST['title'],product=Product.objects.get(pk=product_id),user=UserProfile.objects.get(user=request.user.id))
+        if form.is_valid():
+            form.save()                     # us data ko save karega database mai
+        return redirect('/products/{}'.format(product_id))
 
+    product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(product=product_id).values()
+    comments = Comments.objects.filter(product=product_id) 
+    usernames_for_comments=[]
+    usernames_for_reviews=[]
+    
+    comments_data=[]
+    reviews_data=[]
+    for i in comments:
+        get_id=UserProfile.objects.get(id=i.user_id)
+        user=User.objects.get(id=get_id.user_id)
+        usernames_for_comments.append(user)
+
+    for i in reviews:
+    
+        get_id=UserProfile.objects.get(id=i['user_id'])
+        user=User.objects.get(id=get_id.user_id)
+        usernames_for_reviews.append(user)
+
+    for i in range(0,len(reviews)):
+        x=[]
+        review=list(reviews)[i]
+        username=usernames_for_reviews[i]
+        stars=review['stars']
+        x={
+            'review':review,
+            'username':username.username,
+            "stars":stars,
+            "stars_range":range(0,stars),
+        }
+        reviews_data.append(x)
+
+    for i in range(0,len(comments)):
+        x=[]
+        comment=list(comments)[i]
+        username=usernames_for_comments[i]
+        x={
+            'comment':comment,
+            'username':username.username
+        }
+        comments_data.append(x)
+
+
+    usernames_for_comments=list(usernames_for_comments)
     context = {
         'product': product,
+        'reviews': reviews_data,
+        'comments': comments_data,
+        'form':form,
+        "user_id":UserProfile.objects.get(user=request.user.id).id
     }
 
     return render(request, 'products/product_detail.html', context)

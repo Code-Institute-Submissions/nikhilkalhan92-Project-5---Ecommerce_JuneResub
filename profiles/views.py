@@ -17,7 +17,8 @@ def profile(request):
             messages.success(request, 'Profile updated successfully')
 
     form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+    orders = Order.objects.filter(user=request.user.id)
+    # print(orders)
 
     template = 'profiles/profile.html'
     context = {

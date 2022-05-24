@@ -48,10 +48,6 @@ def all_products(request):
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-<<<<<<< HEAD
-    print(list(products.values()))
-=======
->>>>>>> 5f235c82eb3bbc9acf23df9be62d57ee0173a516
     context = {
         'products': products,
         'search_term': query,
@@ -113,8 +109,6 @@ def products_category(request,category):
 
 
 
-<<<<<<< HEAD
-=======
 # @login_required(login_url='login')
 def update(request,pk):
     task=Comments.objects.get(id=pk)
@@ -144,7 +138,6 @@ def delete(request,pk):
 
 
 
->>>>>>> 5f235c82eb3bbc9acf23df9be62d57ee0173a516
 
 def product_detail(request, product_id):
     """ A view to show individual product details """

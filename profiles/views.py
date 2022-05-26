@@ -19,7 +19,7 @@ def profile(request):
             messages.success(request, 'Profile updated successfully')
 
     form = UserProfileForm(instance=profile)
-    orders = Order.objects.filter(user=request.user.id)
+    orders = Order.objects.filter(email=request.user.email)
     # print(orders)
 
     template = 'profiles/profile.html'

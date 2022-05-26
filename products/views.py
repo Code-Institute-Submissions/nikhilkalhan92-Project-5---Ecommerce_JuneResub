@@ -200,14 +200,17 @@ def product_detail(request, product_id):
         }
         comments_data.append(x)
 
-
+    user = UserProfile.objects.filter(user=request.user.id).first()
+    user_id = None 
+    if user is not None:
+        user_id = user.id   
     usernames_for_comments=list(usernames_for_comments)
     context = {
         'product': product,
         'reviews': reviews_data,
         'comments': comments_data,
-        'form':form,
-        "user_id":UserProfile.objects.get(user=request.user.id).id
+        'form': form,
+        'user_id': user_id
     }
 
     return render(request, 'products/product_detail.html', context)

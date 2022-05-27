@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    background: url('/media/shophere.jpeg') no-repeat center center fixed;
+    background: url('/media/toy.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: darkorange;
+    color: sandybrown;
     font-family: 'Lato';
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 .text-black {
-    color: #000 !important;
+    color: #f4a460 !important;
 }
 
 .border-black {
@@ -262,3 +262,16 @@ input[name='q']::placeholder {
         height: calc(100vh - 116px);
     }
 }
+
+/* edit and delete buttons on product page */
+
+a {
+    color: #ffc107;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+text-danger {
+    color: #dc3545!important;
+}
+

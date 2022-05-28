@@ -38,7 +38,6 @@
 </head>
 <body>
   <header class="container-fluid fixed-top">
-
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
               <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -112,7 +111,6 @@
                 <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
             </div>            
         </div>
-        
     </header>
 
    
@@ -148,4 +146,69 @@
 
     
   </body>
+
+  <footer class="page-footer font-small pt-5 mt-5" style="background-color:black">
+    <div class="container text-center text-md-left">
+        <div class="row">
+            <div class="col-md-6 mt-md-0 mb-3">
+                <h5 class="text-white mb-3">Newsletter</h5>
+                <p class="small text-white">Subsribe to our newletter!</p>
+                <!-- <form class="newsletter-form" action="/profile/NewsLetter" method="POST"> -->
+                    <form method="POST" action="/profile/NewsLetter" class="form mb-2" enctype="multipart/form-data">
+               
+                    {% csrf_token %}
+                  <input type="hidden" name="csrfmiddlewaretoken" value="Mhl3PpBxy0rrnZjIGrEwIk4hCrIAYoHsn64tTK5P0ZbifWSsj00v1niqBjg3Ev62">
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="email" name="email" placeholder="Enter your email address" aria-label="Recipient's email" aria-describedby="subscribe-button">
+                        <button class="btn btn-primary" id="subscribe-button" type="submit">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
+                <!-- <a href="/customer/newsletter/unsubscribe" class="text-white">To unsubscribe, please click here</a> -->
+            </div>
+
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5 class="text-uppercase">Business</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/blog/" class="text-white">Blog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/profile/ContactUsForm" class="text-white">Contact Us</a>
+                    </li>
+
+                    <li>
+                        <a href="/accounts/signup/" class="text-white">Register</a>
+                    </li>
+
+                    <li>
+                        <a href="/accounts/login/" class="text-white">Login</a>
+                    </li>
+
+                    <li>
+                        <a href="/customer/privacy-policy" class="text-white">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5 class="text-uppercase">Social Media</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a class="text-white" href="https://facebook.com" target="_blank" rel="noopener" aria-label="visit our Facebook page (opens in a new page)"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="https://twitter.com" target="_blank" rel="noopener" aria-label="visit our Twitter page (opens in a new page)"><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="https://instagram.com" target="_blank" rel="noopener" aria-label="visit our Instagram page (opens in a new page)"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">This site was made for educational purposes only.</div>
+</footer>
 </html>

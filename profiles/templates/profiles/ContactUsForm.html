@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="col-md-5 col-12 mx-auto py-5 bg-light">
+
+        <form method="POST" action="/profile/ContactUsForm" class="form mb-2" enctype="multipart/form-data">
+               
+            {% csrf_token %}
+            <input type="hidden" name="csrfmiddlewaretoken" value="Mhl3PpBxy0rrnZjIGrEwIk4hCrIAYoHsn64tTK5P0ZbifWSsj00v1niqBjg3yv69">
+            
+            
+
+<div id="div_id_full_name" class="form-group"> <label for="id_full_name" class=" requiredField">
+        Full name<span class="asteriskField">*</span> </label> <div> <input type="text" name="name" maxlength="254" class="textinput textInput form-control" required="" id="id_full_name"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class=" requiredField">
+        Email<span class="asteriskField">*</span> </label> <div> <input type="email" name="email" maxlength="254" class="emailinput form-control" required="" id="id_email"> </div> </div> <div id="div_id_subject" class="form-group"> <label for="id_subject" class=" requiredField">
+        Subject<span class="asteriskField">*</span> </label> <div> <input type="text" name="subject" maxlength="50" class="textinput textInput form-control" required="" id="id_subject"> </div> </div> <div id="div_id_message" class="form-group"> <label for="id_message" class=" requiredField">
+        Message<span class="asteriskField">*</span> </label> <div> <textarea name="message" cols="40" rows="10" maxlength="254" class="textarea form-control" required="" id="id_message"></textarea> </div> </div>
+
+            <button class="btn btn-blue float-right">Submit</button>
+        </form>
+    </div>
+{% endblock %}

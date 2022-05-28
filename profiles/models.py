@@ -20,9 +20,20 @@ class UserProfile(models.Model):
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='Country', null=True, blank=True)
 
-    def __str__(self):
+    def _str_(self):
         return self.user.username
 
+
+
+class NewsLetter(models.Model):
+    email=models.EmailField(unique=True)
+
+class ContactUs(models.Model):
+    name= models.CharField(max_length=20, null=True, blank=True)
+    subject= models.CharField(max_length=30 )
+    email= models.EmailField(unique=True)
+    message = models.TextField()
+    
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):

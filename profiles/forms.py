@@ -1,5 +1,18 @@
 from django import forms
-from .models import UserProfile
+from .models import *
+
+
+class NewsLetterForm(forms.ModelForm):
+
+    class Meta:
+        model = NewsLetter
+        fields = '__all__'
+
+class ContactUsForm(forms.ModelForm):
+
+    class Meta:
+        model = ContactUs
+        fields = '__all__'
 
 
 class UserProfileForm(forms.ModelForm):
@@ -7,12 +20,12 @@ class UserProfileForm(forms.ModelForm):
         model = UserProfile
         exclude = ('user',)
 
-    def __init__(self, *args, **kwargs):
+    def _init_(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field
         """
-        super().__init__(*args, **kwargs)
+        super()._init_(*args, **kwargs)
         placeholders = {
             'default_phone_number': 'Phone Number',
             'default_postcode': 'Postal Code',

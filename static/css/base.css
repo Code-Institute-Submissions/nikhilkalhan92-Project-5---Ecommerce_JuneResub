@@ -284,19 +284,20 @@ logo-font my-1   {
 
 }
 
-.h4 {
-    display: block;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    color: royalblue;
-    font-family: 'Lato';
-    text-align: center!important;
-    text-transform: uppercase;
+
+.col-12 { 
+    position: relative;
+   
 }
 
-logo-font my-1 {
-    color: powderblue;
+.btn-info {
+    color: #fff;
+    background-color: lightslategray;
+    border-color: chocolate;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
 }

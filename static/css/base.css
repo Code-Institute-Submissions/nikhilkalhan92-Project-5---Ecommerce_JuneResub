@@ -6,7 +6,7 @@ body {
     background: url('/media/toy.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: sandybrown;
+    color: lightslategray;
     font-family: 'Lato';
 }
 
@@ -34,13 +34,13 @@ body {
 }
 
 .btn-black {
-    background: black;
+    background: lightslategrey;
     color: white;
 }
 
 .btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    background: bisque;
+    color: rosybrown !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 .text-black {
-    color: #f4a460 !important;
+    color:darkcyan !important;
 }
 
 .border-black {
@@ -275,3 +275,28 @@ text-danger {
     color: #dc3545!important;
 }
 
+
+logo-font my-1   {
+                color: royalblue;
+                font-family: 'Lato';
+                text-align: center!important;
+                text-transform: uppercase;
+
+}
+
+.h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: royalblue;
+    font-family: 'Lato';
+    text-align: center!important;
+    text-transform: uppercase;
+}
+
+logo-font my-1 {
+    color: powderblue;
+}

@@ -7,7 +7,9 @@ I was trying to think of an idea that would make me proud for my last project. a
 When I was younger, I loved Toys! The majority of toys especially the older ones you see are the ones I actually had when I was younger. This is pure nostalgia for me.
 
 My project will contain HTML, CSS, JavaScript, Python+Django, Relational databases & 
-Stripe payments
+Stripe payments 
+
+The admin of the website will also have the ability to use all CRUD functionality (Create, Read, Update, Delete).
 
 ![GitHub contributors](https://img.shields.io/github/contributors/nikhilkalhan92/Project-5---Ecommerce)
 ![GitHub last commit](https://img.shields.io/github/last-commit/nikhilkalhan92/Project-5---Ecommerce)
@@ -49,6 +51,15 @@ First Time Visitors
 - I want the content to be easily read and understandable.
 - I want the checkout process to be straightforward and easy to understand.
 - I want images to be clearly visible.
+- As a first-time visitor, I want to sort the list of available products so that I can easily identify the best rated, best priced and categorically sorted products.
+- As a first-time visitor, I want to sort a specific category of products so that I can find the best-priced or best-rated products in a specific category, or sort the products in that category by name.
+- As a first-time visitor, I want to easily add items to my basket so that I can view all the products I would like to purchase before completing payment.
+- As a first-time visitor, I want to easily remove items and update quantities from my basket so that I can remove any products I do not want before checking out.
+- As a first-time visitor, I want to easily enter my payment information at the checkout page so that I can checkout with no hassles.
+- As a first-time visitor, I want to feel safe and secure with my personal and payment information so that I can confidently provide the details to make a purchase.
+- As a first-time visitor, I want to be able to checkout as a guest.
+- I want the first time visitor to sign up to our newsletter
+- I want the first time visitor to reach out to us via a contact form
 
 Returning User
 
@@ -67,8 +78,22 @@ Admin User
 
 Throughout the project I used the GitHub projects board to log all user stories as my project management tool. This helped me keep focus on the specific tasks as I would move them to the "in progress lane" as I'm working on the story. I would then move them to the "done" lane once the story has been completed. As you see below - you can see the story planned out with screenshots showing my progression.
 
-You will see below my user stories being updated in chronological order.
+# User Stories
 
+Throughout the project, I used the GitHub projects board to log all user stories as my project management tool. This helped me keep the focus on the necessary tasks as I would move them to the "in progress lane" as I'm working on the story. I would then move them to the "done" lane once the story has been completed. I would add new user stories during the project to keep track of the tasks that had to be done.
+
+![userstories1](media/us1.png)
+![userstories2](media/us2.png)
+![userstories3](media/us3.png)
+![userstories4](media/us4.png)
+![userstories5](media/us5.png)
+![userstories6](media/us6.png)
+![userstories7](media/us7.png)
+![userstories8](media/us8.png)
+![userstories9](media/us9.png)
+
+
+# 2 Structure
 
 ## Design 
 
@@ -76,19 +101,22 @@ You will see below my user stories being updated in chronological order.
 
 ## Color Theme
 
+Please find the colours schemes that I used below
+
 ## Wireframes
 
 # Features
 
+All Pages
+The navigation bar is placed at the top of all pages. This contains 2 sections that are separated. The first section is the product search bar, my account icon and the basket icon. The second section contains the main navigation for the products. The navigation bar is dynamic in that meaning depending on if the user is logged in or not the options will change.
+
+If the user is not logged in the navigation bar will look like this:
+
+If the user is logged in the navigation bar will look like this:
+
+If the user is logged in as a superuser the navigation bar will look like this:
+
 ##
-
-
-
-
-
-
-
-# 2 Structure
 
 
 
@@ -134,6 +162,8 @@ There are 3 versions of each wireframe as one shows the design on a web browser 
     - was used for all the text content on the site pages.
 -   [AmIResponsive](https://ui.dev/amiresponsive)
     - Am i Responsive was used to create the image in my Final Design section.
+-   [AWS](https://aws.amazon.com/)
+    - The project uses Amazon Web Services to host all static and media files.
 
 
 
@@ -169,69 +199,74 @@ I used GitHub pages to deploy my final project. To do this I had to:
 5. Click "Save", then wait for it to be deployed. 
 6. The URL will be displayed above the "source" section in GitHub Pages.
 
-**HOW TO FORK A REPOSITORY**
+## I used the terminal to deploy my project locally. To do this I had to:
 
-### If you need to make a copy of a repository:
+- Create a repository on GitHub.
+- Clone the repository on your chosen source code editor (GitPod in my case) using the clone link.
+- Open the terminal within GitPod
+- Enter "python3 manage.py runserver into the terminal.
+- Go to localhost address on my web browser.
+- All locally saved changes will show up here.
 
-1. Login or Sign Up to GitHub.
-2. On GitHub, go to nikhilkalhan92/Project-4---Full-Stack.
-3. In the top right corner, click "Fork".
+## For the final deployment to Heroku, I had to:
 
-### For the final deployment to Heroku, I had to:
-1. Uncomment the PostgreSQL databse from my settings.py file.
-2. Set debug = False in my settings.py file.
-3. Commit and push all files to GitHub
-3. In Heroku, remove the DISABLE_COLLECTSTATIC config var.
-4. In the deploy tab, go to the manual deploy sections and click deploy branch.
+- Create Heroku App
+- Install dj_database_url and psycopg2-binary in my local environment
+- Freeze requirements.txt file
+- In settings.py import dj_database_url
+- Back up the local database using "./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json" in  the terminal window.
+- Comment out the local default database
+- Add the Heroku database url via dj_database_url.parse()
+- Run migrations to the Postgres database
+- Restore the database using this command "./manage.py loaddata db.json" in the terminal windows.
+- Create a SuperUser for the Postgres database
+- Configure the database so that when the app is running on Heroku it uses the Postgres database and when it's running locally it uses the SQLite database
+- Create Procfile so that Heroku creates a web dyno so that it will run gunicorn and serve the Django app
+- Disable Heroku collect static
+- Add the Heroku hostname to allowed hosts in settings.py
+- Generate a new Django secret key and add this to the Heroku config variables
+- Replace the secret key in settings.py to grab it from the environment
+- Set debug to True only if the environment is a development environment
+- Commit changes and deploy to GitHub and Heroku
+- Create an AWS account
+- Create an S3 bucket
+- Configure the S3 bucket settings and policies
+- Create and configure the IAM service
+- In the terminal install Boto3 and Django-storages
+- Freeze requirements.txt file
+- Add a statement to the AWS bucket if the environment is "USE_AWS"
+- Add AWS keys to the Heroku config variables
+- Create custom storage classes for media and static files
+- In settings.py add a statement to use the static and media storage class and locations
+- Commit and push to GitHub and Heroku
+- In the S3 bucket create a new folder for media
+- Upload all used images to the media file in the S3 bucket
+- Add the Stripe keys to the Heroku config variables
+- Create a new webhook endpoint from the Stripe dashboard
+- Add all the Stripe keys to the Heroku config variables
 
-### Project Checklist
-Install Django and the supporting libraries
-1. Install Django and Gunicorn. Gunicorn is the server I am using to run Django on Heroku.
-2. Install support libraries including psycopg2, this is used to connect the PostgreSQL database
-3. Install Cloudinary libraries, this is a host provider service that stores images
-4. Create the requirements.txt file. This includes the project's dependencies allowing us to run the project in Heroku.
 
-### Create a new, blank Django Project
-1. Create a new project
-2. Create the app
-3. Migrate all new changes to the database
-4. Run the server to test
 
-### Setup project to use Cloudinary and PostgreSQL
-1. Create new Heroku app
-2. Sign into Heroku
-3. Select New
-4. Select create new app
-5. Enter a relevant app name
-6. Select appropriate region
-7. Select the create app button
+# 7. Marketing 
 
-### Attach PostgreSQL database
-1. In Heroku go to resources
-2. Search for Postgres in the add-ons box
-3. Select Heroku Postgres
-4. Submit order form
+I made an online social media page for my store. You can see the screenshots below via browser and mobile.
 
-### Prepare the environment and settings.py file
-1. Create env.py file
-2. Add DATABASE_URL with the Postgres URL from Heroku
-3. Add SECRET_KEY with a randomly generated key
-4. Add SECRET_KEY and generated key to the config vars in Heroku
-5. Add if statement to settings.py to prevent the production server from erroring
-6. Replace insecure key with the environment variable for the SECRET_KEY
-7. Add Heroku database as the back end
-8. Migrate changes to new database
+Browser
 
-### Get static media files stored on Cloudinary
-1. Create a Cloudinary account
-2. From the dashboard, copy the API Environment variable
-3. In the settings.py file create a new environment variable for CLOUDINARY_URL
-4. Add the CLOUDINARY_URL variable to Heroku
-5. Add a temporary config var for DISABLE_COLLECTSTATIC
-6. In settings.py add Cloudinary as an installed app
-7. Add static and media file variables
-8. Add templates directory
-9. Change DIR's key to point to TEMPALTES_DIR
-10. Add Heroku hostname to allowed hosts
-11. Create directories for media, static and templates in the project workspace
-12. Create a Procfile
+![socialmedia1](media/sm1.png)
+
+![socialmedia3](media/sm3.png)
+
+![socialmedia4](media/sm4.png)
+
+![socialmedia5](media/sm5.png)
+
+![socialmedia6](media/sm6.png)
+
+![socialmedia7](media/sm7.png)
+
+![socialmediamobile](media/smm1.png)
+
+![socialmediamobile1](media/smm2.png)
+
+![sociamediamobile2](media/smm3.png)

@@ -28,8 +28,8 @@ body {
 }
 
 .shop-now-button {
-    background: lightslategrey;
-    color: cyan;
+    background: #FFA500;
+    color: crimson;
     min-width: 260px;
     text-align: center;
     justify-content: center;

@@ -194,3 +194,5 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'nikstoyshop@example.com'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+ACCOUNT_EMAIL_VERIFICATION = "none"

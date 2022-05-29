@@ -279,3 +279,15 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+def delete_products(request,pk):
+    item=Product.objects.get(id=pk)  # fetched comment 
+    id=item.product.id  # product id is fetched here 
+    if request.method=='POST':
+        item.delete()
+        return redirect('/products/{}'.format(id))  # refreshing the page
+    # print(item.product.id)
+    context={
+        'item':item
+    }
+    return render(request,'products/delete.html',context)

@@ -11,6 +11,7 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
+    user=models.ForeignKey(UserProfile, on_delete=models.CASCADE)    
     order_number = models.CharField(max_length=32, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
@@ -56,7 +57,7 @@ class Order(models.Model):
             self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
 
-    def __str__(self):
+    def _str_(self):
         return self.order_number
 
 
@@ -75,5 +76,5 @@ class OrderLineItem(models.Model):
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 
-    def __str__(self):
+    def _str_(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'

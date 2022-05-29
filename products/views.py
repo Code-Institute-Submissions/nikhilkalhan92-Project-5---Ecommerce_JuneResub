@@ -13,10 +13,6 @@ from .forms import ProductForm
 
 # Create your views here.
 
-
-# Create your views here.
-
-
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
     products = Product.objects.all()
@@ -152,10 +148,10 @@ def product_detail(request, product_id):
 
     form=taskform()     # blank form
     if request.method=='POST':
-        form=taskform(request.POST)     # us form mai post request ka data dalegaa 
+        form=taskform(request.POST)     
         Comments.objects.create(comment=request.POST['title'],product=Product.objects.get(pk=product_id),user=UserProfile.objects.get(user=request.user.id))
         if form.is_valid():
-            form.save()                     # us data ko save karega database mai
+            form.save()                     
         return redirect('/products/{}'.format(product_id))
 
     product = get_object_or_404(Product, pk=product_id)

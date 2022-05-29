@@ -249,6 +249,12 @@ I used GitHub pages to deploy my final project. To do this I had to:
 
 # 7. Marketing 
 
+For my marketing strategies, I decided to go with content marketing, Social media and email marketing root
+
+Social media - Using these platforms will help build and interact with customers to build relationships and loyalty. This also helps build the brand. Followers will help share the business posts and in result gain more traction with other people. The same content can be across all social media platforms.
+
+Email marketing - Using email marking via a newsletter will be beneficial as it is a free source of marketing. Those who are subscribed are more likely to convert into paying customers. This will increase sales and returning customers as I can provide discount codes and other special offers. A good pro is that the business has total control over the design of the emails.
+
 I made an online social media page for my store. You can see the screenshots below via browser and mobile.
 
 Browser
@@ -270,3 +276,24 @@ Browser
 ![socialmediamobile1](media/smm2.png)
 
 ![sociamediamobile2](media/smm3.png)
+
+# 8. SEO
+
+To improve the search engine optimisation (SEO) of the site I:
+
+Added keywords in a meta tag to my base.html. The keywords were researched using WordTracker, there are a number of short-tail and long-tail keywords.
+
+The following words were added due to popularity for certain products & words affilated to them
+- WWE 
+- AEW 
+- Tag Team Titles 
+- Sports Entertainment
+- Hot Wheels
+- WCW
+- Sting
+- Wolfpac
+- Mighty Morphin Power Rangers
+- Green with Evil
+- Pro-Wrestling
+- DX
+- Attitude Era

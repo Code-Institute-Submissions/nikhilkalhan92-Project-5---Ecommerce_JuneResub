@@ -28,9 +28,12 @@ body {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: lightslategrey;
+    color: cyan;
     min-width: 260px;
+    text-align: center;
+    justify-content: center;
+
 }
 
 .btn-black {
@@ -62,7 +65,7 @@ body {
 }
 
 .text-black {
-    color:darkcyan !important;
+    color:grey !important;
 }
 
 .border-black {
@@ -301,3 +304,4 @@ logo-font my-1   {
     background-color: #dc3545;
     border-color: #dc3545;
 }
+

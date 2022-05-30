@@ -116,11 +116,191 @@ If the user is logged in the navigation bar will look like this:
 
 If the user is logged in as a superuser the navigation bar will look like this:
 
-##
+As a superuser, the admin will have access to the product management and blog management links.
+
+The footer is placed at the bottom of each page with social media icons, a form to subscribe to the newsletter, a link to unsubscribe to the newsletter and useful business-related links. All links in the footer open the links in a new tab.
+
+The business logo is also placed at the top of all pages. Clicking on it will also direct the user to the home page.
+
+## Sign Up Page
+A simple signup form that requires the user to enter a unique email address and a password. The password must be entered again for confirmation, this must match the already entered password above.
+A message to prompt the user that if an account is already been created they can click the sign-in hyperlink to be redirected to the sign-in page.
+If the user enters an email address that has already been registered, the user is prompted by an error message.
+If the user enters a password that is not secure, the user will be prompted by a message.
+If the user enters both passwords that do not match, the user is prompted by a message.
+If the user does not enter an email address the form will show a validation error, prompting the user to enter the field in an email format.
+
+## Login Page
+A login form that requires the user to enter the email address and password that they used when signing up to the site.
+The user can only log in once they have activated their account via an email received after signing up.
+A message to prompt the user that if an account has not been created they can click the signup hyperlink to be redirected to the signup page.
+If the user enters in the wrong credentials, a message is displayed to the user.
+Once the user has successfully logged in, they will be redirected to the home page. A success message will show to confirm the login has been successful.
+
+## Landing Page
+A carousel that displays what the user can expect from this store.
+A shop now button that directs the user to the all products page. The user can then easily identify products they would like to purchase and add them to the basket.
+
+## Products Page
+The user can access the product pages by selecting the category on the navigation bar.
+The page displays a count of the search results within the category.
+Sort by the filter at the top right of the page, so the user can filter by price, rating, name and category.
+Each product has an image, name of product, price, category and rating.
+The page also contains a back to top button, which the user can click to go to the top of the page.
+As a superuser, the admin can see the edit and delete buttons, allowing quick access to the product admin.
+
+## Products Details Page
+The product details will showcase an image, name of the product, short description, price, weight selector(if the product has different weights), category and rating, quantity selector, keep shopping button and an add to basket button.
+As a superuser, the admin can see the edit and delete buttons, allowing quick access to the product admin.
+The quantity selector starts at 1. When the quantity is at 1, the minus button is disabled.
+When adding a product to the basket, the user will be prompted with a success message confirming the product has been added.
+
+## Basket Page
+This page shows each product as a line item, displaying an image, name of the product, weight, SKU, price per item, the quantity selected, quantity selector to update and a subtotal for each item.
+When the quantity selector is at 1, the minus button is disabled.
+A pricing summary of the whole basket is also shown with the basket total, delivery fee and total.
+If the user has not met the free delivery threshold then an alert message is shown, prompting the user that they can qualify for free delivery if they spend more.
+
+## Checkout Page
+A checkout form, prompts the user to enter their delivery details with Stripe integration.
+A checkbox for the user to confirm if they would like to save their details for next time. This only saves delivery details and not the card details.
+A summary of the user's order is also shown, the user can then be sure they are making the correct purchase before continuing with the checkout process.
+A message is shown just below the complete order button to warn the user that they will be charged a certain amount on their card.
+
+## Checkout Success Page
+This page shows a summary of their order, with an order number.
+Once the user is on this page, an email will also be triggered to send out an order confirmation email.
+My Profile Page
+This page shows a form so the user can update their delivery details. Upon completing the form, all delivery details will be updated if the user proceeds to the checkout page again.
+Order history is also displayed, where the user can select the order number to view a previous order confirmation summary. An alert will also show prompting the user they are viewing a past order confirmation summary.
+
+## Product Management Page
+This page is for superusers only.
+A form to add more products to the store.
+
+## Newsletter Subscribe Page
+A one-field form for the user to enter their email to subscribe to the newsletter.
+Once the user has successfully subscribed to the newsletter, they will be redirected to the home page. A success message will show up confirming the user has successfully subscribed to the newsletter.
+If the user has already subscribed, an error message will show up.
+
+# Manual Testing
+
+I have tested my site on Safari and google chrome on multiple devices.
+
+These include:
+
+iPhone X
+iPhone XS Max
+iPad Pro
+MacBook Pro
+Please find below my testing process for all pages via mobile and web:
+
+## Navigation Bar
+
+All Pages:
+
+Home page	When clicking the "home" link in the navigation bar (mobile only) or on the business logo, the browser redirects me to the home page.	
+
+All products page	When clicking the "All Products" link in the navigation bar, the category shows a dropdown list so I have access to more sort/filter options. The user will know they are on this page by the heading.
+
+All Products - When clicking the "All Productss" link in the navigation bar, it will give you 4 options to click on : price,rating catogroy and all products.
+
+Toys - When clicking the "toys" link in the navigation bar, you get to select 2 options which it will direct you to the page you selected
+
+Wrestling -	When clicking the "Wrestling" link in the navigation bar, you get to select 2 options which it will direct you to the page you selected
+
+Login / Logout page - When clicking the "login" or "logout links in the navigation bar, the browser redirects me to the login or logout page.
+
+Basket page - When clicking the "basket" icon in the navigation bar, the browser redirects me to the basket page. The user will know they are on this page by the heading
+
+My Profile page	- When clicking the "My profile" link in the navigation bar, the browser redirects me to my profile page. The user will know they are on this page by the heading.
+
+Product management page - When clicking the "product management" link as a superuser in the navigation bar, the browser redirects me to the product management page. The user will know they are on this page by the heading.
+
+Search bar- When searching for a keyword, the results will show products that contain the keyword in the product name or description.
+
+Foreground & background colour - Checked foreground information is not distracted by background elements.	
+
+Text - Checked that all fonts and colours used are consistent.
+
+## Footer
+
+Subscribe to newsletter	When filling out the newsletter form in the navigation bar from the footer, the browser redirects me to the home page if the form was completed successfully. The web page also shows me a success message.
+
+Contact Us page	When clicking the "contact us" link in the footer, the browser redirects me to the contact page. The user will know they are on this page by the heading.
+
+Register page	When clicking the "Register" link in the footer, the browser redirects me to the register page. The user will know they are on this page by the heading.
+
+Login page	When clicking the "login" link in the footer, the browser redirects me to the login page.
 
 
+Facebook - When clicking the Facebook icon, a new tab opens and redirects to the Facebook website.
 
+Twitter	- When clicking the Twitter icon, a new tab opens and redirects to the Twitter website.
 
+Instagram - When clicking the Instagram icon, a new tab opens and redirects to the Instagram website.
+
+## Home page
+
+Media - All media assets are displayed properly, have no pixelation or stretched images and are responsive on all devices.	
+Responsiveness	Check every element on the page for consistent scalability in mobile, tablet and desktop view.
+
+## Products page
+
+Media - All media assets are displayed properly, have no pixelation or stretched images and are responsive on all devices.
+
+Responsiveness - Check every element on the page for consistent scalability in mobile, tablet and desktop view.	
+
+Sort filter	Check the sort/filter functionality by selecting each option. Each option reloads the page and sorts the products in the corresponding order.
+
+Edit Button (SuperUser only)	Check the edit button is only accessible if the user is logged in as a SuperUser.
+
+Delete Button (SuperUser only)	Check the delete button is only accessible if the user is logged in as a SuperUser.
+
+## Products details page
+
+Media - All media assets are displayed properly, have no pixelation or stretched images and are responsive on all devices.	
+Responsiveness - Check every element on the page for consistent scalability in mobile, tablet and desktop view.	
+
+Edit Button (SuperUser only) - Check the edit button is only accessible if the user is logged in as a SuperUser.
+
+Delete Button (SuperUser only) - Check the delete button is only accessible if the user is logged in as a SuperUser.
+
+## Shopping bag page
+
+Media - All media assets are displayed properly, have no pixelation or stretched images and are responsive on all devices.	
+Responsiveness - Check every element on the page for consistent scalability in mobile, tablet and desktop view.	
+
+Remove item from bag - Clicking the remove link on an item removes the item from the bag.	
+
+## Checkout page
+
+Media - All media assets are displayed properly, have no pixelation or stretched images and are responsive on all devices.	
+Responsiveness - Check every element on the page for consistent scalability in mobile, tablet and desktop view.
+
+Checkout form - Filling in the form with the correct validation processes the order.	
+
+Checkout form - Filling in the form with the incorrect validation shows errors messages.
+
+Save details checkout - Selecting the "Save this delivery information to my profile" checkbox, this saves/updates my profile details.	
+
+Card authentication	Used the Stripe test card details and purposely failed authenticated to check for error messages.
+
+## Checkout success page
+
+Responsiveness	Check every element on the page for consistent scalability in mobile, tablet and desktop view.	
+
+Order history	When clicking on an order number in the order history section, this takes me to a past order confirmation summary page.	
+
+Updating my profile	When updating the default delivery information, this reflects on the checkout page.
+
+## Product management page
+
+Responsiveness - Check every element on the page for consistent scalability in mobile, tablet and desktop view.
+
+Adding a product - When filling out the form to add a new product, the product is added to the relevant category and is searchable via the search bar.	
+
+Uploading an image	When uploading an image to a new product, the site shows the name of the file that will be uploaded. When checking the product details page, the image also shows.
 
 
 # 3 Skelton

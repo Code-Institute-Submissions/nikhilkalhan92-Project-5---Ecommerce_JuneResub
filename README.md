@@ -51,13 +51,13 @@ First Time Visitors
 - I want the content to be easily read and understandable.
 - I want the checkout process to be straightforward and easy to understand.
 - I want images to be clearly visible.
-- As a first-time visitor, I want to sort the list of available products so that I can easily identify the best rated, best priced and categorically sorted products.
-- As a first-time visitor, I want to sort a specific category of products so that I can find the best-priced or best-rated products in a specific category, or sort the products in that category by name.
-- As a first-time visitor, I want to easily add items to my basket so that I can view all the products I would like to purchase before completing payment.
-- As a first-time visitor, I want to easily remove items and update quantities from my basket so that I can remove any products I do not want before checking out.
-- As a first-time visitor, I want to easily enter my payment information at the checkout page so that I can checkout with no hassles.
-- As a first-time visitor, I want to feel safe and secure with my personal and payment information so that I can confidently provide the details to make a purchase.
-- As a first-time visitor, I want to be able to checkout as a guest.
+- I want to sort the list of available products so that I can easily identify the best rated, best priced and categorically sorted products.
+- I want to sort a specific category of products so that I can find the best-priced or best-rated products in a specific category, or sort the products in that category by name.
+- I want to easily add items to my basket so that I can view all the products I would like to purchase before completing payment.
+- I want to easily remove items and update quantities from my basket so that I can remove any products I do not want before checking out.
+- I want to easily enter my payment information at the checkout page so that I can checkout with no hassles.
+- I want to feel safe and secure with my personal and payment information so that I can confidently provide the details to make a purchase.
+- I want to be able to checkout as a guest.
 - I want the first time visitor to sign up to our newsletter
 - I want the first time visitor to reach out to us via a contact form
 
@@ -95,13 +95,34 @@ Throughout the project, I used the GitHub projects board to log all user stories
 
 # 2 Structure
 
-## Design 
+It is really important to include responsive design in this project as many users are using different devices (mobile, tablet, laptop/PC). This gives the user the best experience on their device.
 
-## Fonts
+Responsive on all device sizes
+Easy navigation through labelled buttons
+Footer at the bottom of the each page that links to the social media websites, newsletter subscription form and business pages.
+All elements will be consistent including font size, font family, colour scheme.
 
-## Color Theme
+## Checkout Modals
+![checkoutmodals](media/checkoutmodals.png)
+![checkoutmodals2](media/checkoutmodals2.png)
+
+## Products
+![productsmodal](media/productsmodal.png)
+
+## Profile
+![profiles](media/profiles.png)
+
+# Color Theme
 
 Please find the colours schemes that I used below
+
+![color1](media/lightslategrey.png)
+![color1](media/ffe4c4.png)
+![color1](media/ffc107.png)
+![color1](media/ffa500.png)
+![color1](media/d2691e.png)
+![color1](media/a52a2a.png)
+![color1](media/17a2b8.png)
 
 ## Wireframes
 
@@ -307,7 +328,7 @@ Uploading an image	When uploading an image to a new product, the site shows the 
 
 I used Balsamiq to create my wireframes as this gives the template of the UI. This also shows where all elements will be placed within the screen.
 
-There are 3 versions of each wireframe as one shows the design on a web browser and the other show on a Ipad and Iphone
+There are 2 versions of each wireframe as one shows the design on a web browser and on a Iphone
 
 
 

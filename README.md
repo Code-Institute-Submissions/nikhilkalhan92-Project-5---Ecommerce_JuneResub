@@ -294,7 +294,7 @@ Order history	When clicking on an order number in the order history section, thi
 
 Updating my profile	When updating the default delivery information, this reflects on the checkout page.
 
-## Product management page ii
+## Product management page                                  
 
 Responsiveness - Check every element on the page for consistent scalability in mobile, tablet and desktop view.
 

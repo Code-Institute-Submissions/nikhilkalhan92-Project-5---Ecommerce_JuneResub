@@ -124,20 +124,75 @@ Please find the colours schemes that I used below
 ![color1](media/a52a2a.png)
 ![color1](media/17a2b8.png)
 
-## Wireframes
+# Wireframes
 
-# Features
+I used Balsamiq to create my wireframes as this gives the template of the UI. This also shows where all elements will be placed within the screen.
+
+There are 2 versions of each wireframe as one shows the design on a web browser and on a Iphone
+
+## Home
+![home](media/home.png)
+
+## login
+![login](media/login.png)
+
+## products
+![products](media/products.png)
+
+## my profile
+![hmyprofile](media/myprofile.png)
+
+## individual product
+![indproduct](media/indivudalproduct.png)
+
+## add products ( superuser)
+![add product](media/addproductsuperuser.png)
+
+## checkout
+![checkout](media/checkout.png)
+
+## checkoutbag
+![checkbag](media/checkoutbag.png)
+
+## confirmation
+![confirmation](media/confirmation.png)
+
+## contact us
+![contactus](media/contactus.png)
+
+## Mobile
+
+![mobile1](media/mobileproducts.png)
+
+![mobile1](media/mobile3.png)
+
+![mobile1](media/mobile4.png)
+
+![mobile1](media/mobile5.png)
+
+![mobile1](media/mobile6.png)
+
+![mobile1](media/mobile7.png)
+
+
+
+
+
+# 3 Features
 
 All Pages
 The navigation bar is placed at the top of all pages. This contains 2 sections that are separated. The first section is the product search bar, my account icon and the basket icon. The second section contains the main navigation for the products. The navigation bar is dynamic in that meaning depending on if the user is logged in or not the options will change.
 
 If the user is not logged in the navigation bar will look like this:
+![notlogin](media/notlogin.png)
 
 If the user is logged in the navigation bar will look like this:
+![user](media/user.png)
 
 If the user is logged in as a superuser the navigation bar will look like this:
+![superuser](media/superuser.png)
 
-As a superuser, the admin will have access to the product management and blog management links.
+As a superuser, the admin will have access to the product management / adding deleting products.
 
 The footer is placed at the bottom of each page with social media icons, a form to subscribe to the newsletter, a link to unsubscribe to the newsletter and useful business-related links. All links in the footer open the links in a new tab.
 
@@ -145,64 +200,96 @@ The business logo is also placed at the top of all pages. Clicking on it will al
 
 ## Sign Up Page
 A simple signup form that requires the user to enter a unique email address and a password. The password must be entered again for confirmation, this must match the already entered password above.
+
 A message to prompt the user that if an account is already been created they can click the sign-in hyperlink to be redirected to the sign-in page.
+
 If the user enters an email address that has already been registered, the user is prompted by an error message.
+
 If the user enters a password that is not secure, the user will be prompted by a message.
+
 If the user enters both passwords that do not match, the user is prompted by a message.
+
 If the user does not enter an email address the form will show a validation error, prompting the user to enter the field in an email format.
+
+![userlogin](media/userlogin.png)
+![exists](media/userexists.png)
+![signup](media/signupsuces.png)
+![psimilar](media/pwsimilar.png)
 
 ## Login Page
 A login form that requires the user to enter the email address and password that they used when signing up to the site.
 The user can only log in once they have activated their account via an email received after signing up.
-A message to prompt the user that if an account has not been created they can click the signup hyperlink to be redirected to the signup page.
+
 If the user enters in the wrong credentials, a message is displayed to the user.
 Once the user has successfully logged in, they will be redirected to the home page. A success message will show to confirm the login has been successful.
 
+![signup](media/signupsuces.png)
+![psimilar](media/pwsimilar.png)
+
 ## Landing Page
-A carousel that displays what the user can expect from this store.
+
 A shop now button that directs the user to the all products page. The user can then easily identify products they would like to purchase and add them to the basket.
 
 ## Products Page
 The user can access the product pages by selecting the category on the navigation bar.
+
 The page displays a count of the search results within the category.
+
 Sort by the filter at the top right of the page, so the user can filter by price, rating, name and category.
+
 Each product has an image, name of product, price, category and rating.
+
 The page also contains a back to top button, which the user can click to go to the top of the page.
+
 As a superuser, the admin can see the edit and delete buttons, allowing quick access to the product admin.
 
 ## Products Details Page
-The product details will showcase an image, name of the product, short description, price, weight selector(if the product has different weights), category and rating, quantity selector, keep shopping button and an add to basket button.
-As a superuser, the admin can see the edit and delete buttons, allowing quick access to the product admin.
-The quantity selector starts at 1. When the quantity is at 1, the minus button is disabled.
+The product details will showcase an image, name of the product, short description, price,  category and rating, quantity selector, keep shopping button and an add to basket button.
+
 When adding a product to the basket, the user will be prompted with a success message confirming the product has been added.
+
+![productadded](media/product added.png)
+
+![basket](media/addtobasket.png)
 
 ## Basket Page
 This page shows each product as a line item, displaying an image, name of the product, weight, SKU, price per item, the quantity selected, quantity selector to update and a subtotal for each item.
-When the quantity selector is at 1, the minus button is disabled.
+
 A pricing summary of the whole basket is also shown with the basket total, delivery fee and total.
+
 If the user has not met the free delivery threshold then an alert message is shown, prompting the user that they can qualify for free delivery if they spend more.
+
+![basket](media/checkoutpage.png)
 
 ## Checkout Page
 A checkout form, prompts the user to enter their delivery details with Stripe integration.
+
 A checkbox for the user to confirm if they would like to save their details for next time. This only saves delivery details and not the card details.
+
 A summary of the user's order is also shown, the user can then be sure they are making the correct purchase before continuing with the checkout process.
+
 A message is shown just below the complete order button to warn the user that they will be charged a certain amount on their card.
 
 ## Checkout Success Page
 This page shows a summary of their order, with an order number.
-Once the user is on this page, an email will also be triggered to send out an order confirmation email.
+
 My Profile Page
+
 This page shows a form so the user can update their delivery details. Upon completing the form, all delivery details will be updated if the user proceeds to the checkout page again.
-Order history is also displayed, where the user can select the order number to view a previous order confirmation summary. An alert will also show prompting the user they are viewing a past order confirmation summary.
+
+Order history is also displayed, where the user can select the order number to view a previous order confirmation summary.
+ An alert will also show prompting the user they are viewing a past order confirmation summary.
 
 ## Product Management Page
 This page is for superusers only.
+
 A form to add more products to the store.
 
 ## Newsletter Subscribe Page
 A one-field form for the user to enter their email to subscribe to the newsletter.
+
 Once the user has successfully subscribed to the newsletter, they will be redirected to the home page. A success message will show up confirming the user has successfully subscribed to the newsletter.
-If the user has already subscribed, an error message will show up.
+
 
 # Manual Testing
 
@@ -323,18 +410,6 @@ Adding a product - When filling out the form to add a new product, the product i
 
 Uploading an image	When uploading an image to a new product, the site shows the name of the file that will be uploaded. When checking the product details page, the image also shows.
 
-
-# 3 Skelton
-
-I used Balsamiq to create my wireframes as this gives the template of the UI. This also shows where all elements will be placed within the screen.
-
-There are 2 versions of each wireframe as one shows the design on a web browser and on a Iphone
-
-
-
-# 4 Features
-
-
 # 5 Technologies used
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML)
@@ -380,17 +455,29 @@ There are 2 versions of each wireframe as one shows the design on a web browser 
 
 5. ![error5](media/error5.png)
 
-## Testing
+# 6 Testing
 Validators
 
 ## Full Testing
 
 ## Lighthouse
 
+# Solved Bugs
+
+some of the erros i solved are below
+
+1. ![error1](media/error1.png)
+
+2. ![error3](media/error3.png)
+
+3. ![error4](media/error4.png)
 
 
 
-# 6. Development Cycle
+
+
+
+# 7 Development Cycle
 
 I used GitHub pages to deploy my final project. To do this I had to:
 1. Login or Sign Up to [GitHub] - https://github.com/nikhilkalhan92/Project-5---Ecommerce

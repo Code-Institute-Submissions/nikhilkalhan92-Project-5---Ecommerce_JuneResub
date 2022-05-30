@@ -1,7 +1,8 @@
 from django.db import models
 from profiles.models import UserProfile
-from datetime import datetime   
+from datetime import datetime
 # Create your models here.
+
 
 class Category(models.Model):
     name = models.CharField(max_length=254)
@@ -16,9 +17,10 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
+
 class Review(models.Model):
     date = models.DateTimeField(default=datetime.now, blank=True)
-    user=models.ForeignKey(UserProfile, on_delete=models.CASCADE)  
+    user=models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     product = models.ForeignKey('Product', null=True, blank=True, on_delete=models.SET_NULL)
     stars=models.IntegerField()
     comment=models.CharField(max_length=512, null=True, blank=True)

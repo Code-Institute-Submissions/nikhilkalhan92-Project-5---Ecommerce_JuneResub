@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-97pv8ot5b12i2w!50b8f-qflic&f91n@(f&m=b_gudd$f&1d-x'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -214,3 +214,4 @@ DEFAULT_FROM_EMAIL = 'nikstoyshop@example.com'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 ACCOUNT_EMAIL_VERIFICATION = "none"
+

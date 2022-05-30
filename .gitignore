@@ -10,3 +10,4 @@ cloudinary_python.txt
 *.sqlite3
 db.json
 products.json
+env.py 

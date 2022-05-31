@@ -24,9 +24,9 @@ class ProductForm(forms.ModelForm):
 
 
 class taskform(forms.ModelForm):
-    title=forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Write comment....'}))
+    title=forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Write comment....'})) 
 
     class Meta:     
 
-        model=Comments   
+        model=Comments 
         fields='__all__' 

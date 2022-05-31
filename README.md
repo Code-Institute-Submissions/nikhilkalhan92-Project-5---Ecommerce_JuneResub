@@ -175,9 +175,6 @@ There are 2 versions of each wireframe as one shows the design on a web browser 
 ![mobile1](media/mobile7.png)
 
 
-
-
-
 # 3 Features
 
 All Pages
@@ -456,7 +453,16 @@ Uploading an image	When uploading an image to a new product, the site shows the 
 5. ![error5](media/error5.png)
 
 # 6 Testing
-Validators
+
+
+## Validators
+
+![html](https://validator.w3.org/) - majority of my errors were part of the jinga template
+
+![css](https://jigsaw.w3.org/css-validator/) - no errors
+
+![css1]!(media/css.png)
+
 
 
 # Lighthouse

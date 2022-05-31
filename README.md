@@ -17,7 +17,7 @@ The admin of the website will also have the ability to use all CRUD functionalit
 ![GitHub top language](https://img.shields.io/github/languages/top/nikhilkalhan92/Project-5---Ecommerce)
 
 
-Link to final Project is here -
+[Here is a link to the final project](https://project5-ecommerce.herokuapp.com/)
 
 
 # 1 - User Experience
@@ -458,9 +458,24 @@ Uploading an image	When uploading an image to a new product, the site shows the 
 # 6 Testing
 Validators
 
-## Full Testing
 
-## Lighthouse
+# Lighthouse
+
+## home page
+![home](media/lighthousehome.png)
+
+## shopping bag
+![home](media/lighthosueshoppingbag.png)
+
+## checkout bag
+![home](media/lighthousecheckoutbag.png)
+
+## my profile
+![home](media/lighthousemyprofile.png)
+
+## successpage
+![home](media/lighthousesuccess.png)
+
 
 # Solved Bugs
 
@@ -471,10 +486,6 @@ some of the erros i solved are below
 2. ![error3](media/error3.png)
 
 3. ![error4](media/error4.png)
-
-
-
-
 
 
 # 7 Development Cycle
@@ -585,3 +596,27 @@ The following words were added due to popularity for certain products & words af
 - Pro-Wrestling
 - DX
 - Attitude Era
+
+# 9 Final Product
+
+![finalproduct](media/finalhome.png)
+![finalproduct](media/footer.png)
+![finalproduct](media/finalproducts.png)
+![finalproduct](media/fp2.png)
+![finalproduct](media/idndivudalproducts.png)
+![finalproduct](media/adminfinal.png)
+![finalproduct](media/checkout2.png)
+![finalproduct](media/product.png)
+![finalproduct](media/prodducxtmanagment.png)
+![finalproduct](media/shoppingbag.png)
+![finalproduct](media/signup.png)
+![swipe](media/swipe.png)
+
+# 10 Project Acknowledgements 
+
+Marcel - my mentor who has been fantastic. Since the day I started he has helped
+
+Friends & family who have supported me
+
+Code Institute 
+

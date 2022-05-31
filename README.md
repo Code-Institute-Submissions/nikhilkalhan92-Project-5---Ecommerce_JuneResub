@@ -19,6 +19,8 @@ The admin of the website will also have the ability to use all CRUD functionalit
 
 [Here is a link to the final project](https://project5-ecommerce.herokuapp.com/)
 
+![amiresponsive](media/amiresponsive.png)
+
 
 # 1 - User Experience
 
@@ -605,6 +607,7 @@ The following words were added due to popularity for certain products & words af
 ![finalproduct](media/prodducxtmanagment.png)
 ![finalproduct](media/shoppingbag.png)
 ![finalproduct](media/signup.png)
+![checkoutsuccess](media/checkoutsuccess.png)
 ![swipe](media/swipe.png)
 
 # 10 Project Acknowledgements 

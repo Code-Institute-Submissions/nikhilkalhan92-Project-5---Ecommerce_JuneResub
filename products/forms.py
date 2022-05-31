@@ -3,7 +3,7 @@ from django import forms
 from django.forms import ModelForm
 from .models import Product, Category
 
-from django.contrib.auth.models import User              
+from django.contrib.auth.models import User   
 from .models import Comments
 
 
@@ -24,9 +24,9 @@ class ProductForm(forms.ModelForm):
 
 
 class taskform(forms.ModelForm):
-    title=forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Write comment....'})) 
+    title=forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Write comment....'}))
 
-    class Meta:     
+    class Meta:
 
-        model=Comments 
-        fields='__all__' 
+        model=Comments
+        fields= '__all__'

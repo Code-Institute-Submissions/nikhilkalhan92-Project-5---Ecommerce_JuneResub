@@ -13,6 +13,7 @@ from .forms import ProductForm
 
 # Create your views here.
 
+
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
     products = Product.objects.all()
@@ -36,7 +37,7 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+     
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -47,7 +48,7 @@ def all_products(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+   
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
@@ -84,7 +85,7 @@ def products_category(request,category):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+        
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -95,12 +96,11 @@ def products_category(request,category):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+    
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-
 
     context = {
         'products': products,
@@ -112,13 +112,12 @@ def products_category(request,category):
     return render(request, 'products/products.html', context)
 
 
-
 # @login_required(login_url='login')
 def update_comment(request,pk):
-    task=Comments.objects.get(id=pk)  # search comment with that id 
-    id=task.product.id   # id of the product 
-    form=taskform(instance=task)  # whi form huga bs usko edit krsktay hungay 
-    context={'form':form}
+    task = Comments.objects.get(id=pk)  # search comment with that id
+    id = task.product.id   # id of the product
+    form = taskform(instance=task)
+    context = {'form':form}
 
     if request.method=='POST':
         form=taskform(request.POST,instance=task)
@@ -157,8 +156,8 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product_id).values()
     comments = Comments.objects.filter(product=product_id) 
-    usernames_for_comments=[]
-    usernames_for_reviews=[]
+    usernames_for_comments =[]
+    usernames_for_reviews =[]
     
     comments_data=[]
     reviews_data=[]
@@ -170,25 +169,25 @@ def product_detail(request, product_id):
     for i in reviews:
     
         get_id=UserProfile.objects.get(id=i['user_id'])
-        user=User.objects.get(id=get_id.user_id)
+        user=User.objects.get(id=get_id.user_id) 
         usernames_for_reviews.append(user)
 
     for i in range(0,len(reviews)):
         x=[]
-        review=list(reviews)[i]
+        review=list(reviews)[i] 
         username=usernames_for_reviews[i]
         stars=review['stars']
         x={
             'review':review,
-            'username':username.username,
-            "stars":stars,
-            "stars_range":range(0,stars),
+            'username': username.username,
+            "stars": stars,
+            "stars_range": range(0,stars), 
         }
         reviews_data.append(x)
 
     for i in range(0,len(comments)):
         x=[]
-        comment=list(comments)[i]
+        comment =list(comments)[i]
         username=usernames_for_comments[i]
         x={
             'comment':comment,
@@ -199,7 +198,7 @@ def product_detail(request, product_id):
     user = UserProfile.objects.filter(user=request.user.id).first()
     user_id = None 
     if user is not None:
-        user_id = user.id   
+        user_id = user.id
     usernames_for_comments=list(usernames_for_comments)
     context = {
         'product': product,
@@ -230,7 +229,7 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+    
     template = 'products/add_product.html'
     context = {
         'form': form,

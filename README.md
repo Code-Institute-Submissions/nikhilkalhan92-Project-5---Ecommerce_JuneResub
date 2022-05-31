@@ -438,20 +438,6 @@ Uploading an image	When uploading an image to a new product, the site shows the 
 -   [AWS](https://aws.amazon.com/)
     - The project uses Amazon Web Services to host all static and media files.
 
-
-
-# Solved Bugs
-
-1. ![error1](media/error1.png)
-
-2. ![error2](media/error2.png)
-
-3. ![error3](media/error3.png)
-
-4. ![error4](media/error4.png)
-
-5. ![error5](media/error5.png)
-
 # 6 Testing
 
 
@@ -463,6 +449,9 @@ Uploading an image	When uploading an image to a new product, the site shows the 
 
 ![css1]!(media/css.png)
 
+I used the python3 -m flake8 command within GitPod to check for any errors within my Python files. The validator showed multiple "line too long" errors. This was rectified by adding each statement as a new line.
+
+There were also "line too long" errors within my settings.py file but I have chosen to ignore these as this is a very important file.
 
 
 # Lighthouse

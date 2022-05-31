@@ -21,6 +21,10 @@ The admin of the website will also have the ability to use all CRUD functionalit
 
 ![amiresponsive](media/amiresponsive.png)
 
+Admin Login 
+
+user: nikhilkalhan1992
+password: nikhilkalhan
 
 # 1 - User Experience
 
@@ -272,7 +276,7 @@ A message is shown just below the complete order button to warn the user that th
 ## Checkout Success Page
 This page shows a summary of their order, with an order number.
 
-My Profile Page
+## My Profile Page
 
 This page shows a form so the user can update their delivery details. Upon completing the form, all delivery details will be updated if the user proceeds to the checkout page again.
 
@@ -287,7 +291,7 @@ A form to add more products to the store.
 ## Newsletter Subscribe Page
 A one-field form for the user to enter their email to subscribe to the newsletter.
 
-Once the user has successfully subscribed to the newsletter, they will be redirected to the home page. A success message will show up confirming the user has successfully subscribed to the newsletter.
+Once the user has successfully subscribed to the newsletter. A success message will show up confirming the user has successfully subscribed to the newsletter.
 
 
 # Manual Testing
@@ -339,7 +343,6 @@ Contact Us page	When clicking the "contact us" link in the footer, the browser r
 Register page	When clicking the "Register" link in the footer, the browser redirects me to the register page. The user will know they are on this page by the heading.
 
 Login page	When clicking the "login" link in the footer, the browser redirects me to the login page.
-
 
 Facebook - When clicking the Facebook icon, a new tab opens and redirects to the Facebook website.
 
@@ -451,7 +454,7 @@ Uploading an image	When uploading an image to a new product, the site shows the 
 
 ![css1]!(media/css.png)
 
-I used the python3 -m flake8 command within GitPod to check for any errors within my Python files. The validator showed multiple "line too long" errors. This was rectified by adding each statement as a new line.
+I used the python3 -m flake8 command within GitPod to check for any errors within my Python files.
 
 There were also "line too long" errors within my settings.py file but I have chosen to ignore these as this is a very important file.
 
@@ -612,9 +615,9 @@ The following words were added due to popularity for certain products & words af
 
 # 10 Project Acknowledgements 
 
-Marcel - my mentor who has been fantastic. Since the day I started he has helped
+Marcel - my mentor who has been fantastic. Since the day I started he has helped so much. 
 
-Friends & family who have supported me
+My Friends & family who have supported me 
 
 Code Institute 
 
